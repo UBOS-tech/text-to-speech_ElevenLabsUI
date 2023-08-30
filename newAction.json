@@ -10,7 +10,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://nodered-5265-64647921a779951100000161.ubos.tech"
+                    "url": "{{main.env.nr}}/textToSpeech"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -30,8 +30,8 @@
                         "value": "{{Select1.selectedOptionValue}}"
                     },
                     {
-                        "key": "text",
-                        "value": "{{Input1.text}}"
+                        "value": "{{Input1.text}}",
+                        "key": "text"
                     }
                 ],
                 "bodyFormData": [],
@@ -43,7 +43,7 @@
                         "value": true
                     }
                 ],
-                "path": "/textToSpeech"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -51,20 +51,23 @@
                 },
                 {
                     "key": "queryParameters[1].value"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
+                "main.env.nr",
                 "Select1.selectedOptionValue",
-                "i",
                 "Input1.text"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-22T17:50:38.208Z",
-        "updatedAt": "2023-05-24T14:32:39.199Z",
+        "updatedAt": "2023-08-30T13:53:51.999Z",
         "deleted": false,
         "policies": [
             {
